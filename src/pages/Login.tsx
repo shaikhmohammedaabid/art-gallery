@@ -10,6 +10,7 @@ import { artworks } from "@/data/galleryData";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// this is function
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");

@@ -14,17 +14,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  AreaChart, 
-  Area, 
-  XAxis, 
-  YAxis, 
-  Tooltip, 
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
   ResponsiveContainer,
   CartesianGrid
 } from "recharts";
 import { ExternalLink, TrendingUp, BarChart3 } from "lucide-react";
-
+//  akefvv jkslwhfevjdj
 const ArtworkDetail = () => {
   const { id } = useParams();
   const location = useLocation();
@@ -256,37 +256,37 @@ const ArtworkDetail = () => {
               <AreaChart data={artwork.valuationHistory} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
-                <XAxis 
-                  dataKey="date" 
-                  axisLine={false} 
-                  tickLine={false} 
+                <XAxis
+                  dataKey="date"
+                  axisLine={false}
+                  tickLine={false}
                   tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
                   tickFormatter={(val) => new Date(val).getFullYear().toString()}
                 />
-                <YAxis 
-                  hide 
-                  domain={['dataMin - 5000', 'dataMax + 5000']} 
+                <YAxis
+                  hide
+                  domain={['dataMin - 5000', 'dataMax + 5000']}
                 />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'hsl(var(--card))', 
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: 'hsl(var(--card))',
                     border: '1px solid hsl(var(--border))',
                     fontSize: '12px'
                   }}
                   formatter={(value: number) => [`$${value.toLocaleString()}`, "Estimated Value"]}
                   labelFormatter={(label) => new Date(label).toLocaleDateString(undefined, { year: 'numeric', month: 'short' })}
                 />
-                <Area 
-                  type="monotone" 
-                  dataKey="value" 
-                  stroke="hsl(var(--primary))" 
-                  fillOpacity={1} 
-                  fill="url(#colorValue)" 
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stroke="hsl(var(--primary))"
+                  fillOpacity={1}
+                  fill="url(#colorValue)"
                   strokeWidth={2}
                 />
               </AreaChart>

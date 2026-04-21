@@ -4,7 +4,7 @@ import LazyImage from "@/components/LazyImage";
 import { artworks } from "@/data/galleryData";
 import FavouriteButton from "@/components/FavouriteButton";
 import { useFavourites } from "@/hooks/FavouritesContext";
-
+//  akefvv jkslwhfevjdj
 const Favourites = () => {
   const { favourites } = useFavourites();
 
@@ -59,12 +59,12 @@ const Favourites = () => {
             {favouriteWorks.map((work) => (
               <article key={work.id} className="space-y-4 animate-enter">
                 <figure className="painting-frame signature-hover hover-scale relative">
-                  <LazyImage 
-                    src={work.image} 
-                    alt={work.alt} 
-                    width={1024} 
-                    height={1280} 
-                    className="h-[520px] w-full object-cover md:h-[620px]" 
+                  <LazyImage
+                    src={work.image}
+                    alt={work.alt}
+                    width={1024}
+                    height={1280}
+                    className="h-[520px] w-full object-cover md:h-[620px]"
                   />
                   <FavouriteButton artworkId={work.id} className="absolute right-4 top-4 z-10" />
                 </figure>
