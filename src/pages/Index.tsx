@@ -67,7 +67,7 @@ const Index = () => {
             <a href="#artists" className="story-link transition-colors hover:text-primary">Artists</a>
             <a href="#visit" className="story-link transition-colors hover:text-primary">Visit</a>
           </nav>
-          <a href="#visit" className="line-button">Plan your visit</a>
+          <a href="/login" className="line-button">Login</a>
         </div>
       </header>
 
@@ -320,9 +320,8 @@ const Index = () => {
             <div className="mt-2 flex h-10 w-full items-center">
               <button
                 onClick={() => setShowFavourites(!showFavourites)}
-                className={`flex h-full w-full items-center justify-between border border-gallery-line px-3 text-sm transition-all duration-300 ${
-                  showFavourites ? "bg-primary text-primary-foreground" : "bg-background"
-                }`}
+                className={`flex h-full w-full items-center justify-between border border-gallery-line px-3 text-sm transition-all duration-300 ${showFavourites ? "bg-primary text-primary-foreground" : "bg-background"
+                  }`}
               >
                 {showFavourites ? "Favourites Only" : "Show All"}
                 <span className={`h-2 w-2 rounded-full ${showFavourites ? "bg-red-400" : "bg-gallery-line"}`} />
